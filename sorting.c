@@ -1,30 +1,33 @@
-#include <stdio.h>
-#include <stdlib.h>
-
-// Comparison function for sorting integers in ascending order
-int compare(const void *a, const void *b) {
-    int num1 = *(const int *)a;
-    int num2 = *(const int *)b;
-
-    if (num1 < num2)
-        return -1;
-    else if (num1 > num2)
-        return 1;
-    else
-        return 0;
-}
-
-int main() {
-    int numbers[] = {5, 2, 8, 1, 9};
-    int size = sizeof(numbers) / sizeof(numbers[0]);
-
-    qsort(numbers, size, sizeof(int), compare);
-
-    printf("Sorted array: ");
-    for (int i = 0; i < size; i++) {
-        printf("%d ", numbers[i]);
+#include<stdio.h>
+void print_arr(int arr[],int size)
+{
+    for(int i=0;i<size;i++)
+    {
+        printf("%d ",arr[i]);
     }
-    printf("\n");
-
-    return 0;
+}
+void sort_array(int arr[],int size)
+{
+    for(int i=0;i<size;i++)
+    {
+        int j=i+1;
+        while(j<size)
+        {
+            if(arr[i]>arr[j])
+            {
+                int temp=arr[i];
+                arr[i]=arr[j];
+                arr[j]=temp;
+            }
+            j++;
+        }
+    }
+}
+int main()
+{
+    int arr[]={1,2,3,6,4,9,78,10};
+    int size;
+    size=sizeof(arr)/sizeof(arr[0]);
+    sort_array(arr,size);
+    print_arr(arr,size);
 }
