@@ -18,10 +18,8 @@ int main() {
     int numbers[] = {5, 2, 8, 1, 9};
     int size = sizeof(numbers) / sizeof(numbers[0]);
 
-    // Sort the array
     qsort(numbers, size, sizeof(int), compare);
 
-    // Print the sorted array
     printf("Sorted array: ");
     for (int i = 0; i < size; i++) {
         printf("%d ", numbers[i]);
