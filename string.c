@@ -4,6 +4,6 @@ int main()
 {
     char str[MAX];
     printf("Enter string :");
-    scanf("%[^\n]",str);
+    fgets(str,MAX,stdin);
     printf("%s",str);
 }
