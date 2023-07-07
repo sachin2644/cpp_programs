@@ -35,5 +35,5 @@ int main()
         printf("element is not found in an array element \n");
         exit(0);
     }
-    free(ptr);
+  
 }
