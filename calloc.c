@@ -20,7 +20,6 @@ int main()
     {
         scanf("%d",&ptr[i]);
     }
-    printf("resverse array elements \n");
     for(int i=size-1;i>=0;i--)
     {
         printf("%d ",ptr[i]);
