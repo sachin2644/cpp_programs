@@ -18,6 +18,9 @@ int main()
     printf("After copying array elements :");
     for(int i=size-1;i>=0;i--)
     {
-        printf("%d ",cpy[i]);
+        if(cpy[i]%2==0)
+        {
+           printf("%d ",cpy[i]);
+        }
     }
 }
