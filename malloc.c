@@ -22,5 +22,5 @@ int main()
     {
         printf("%d ",ptr[i]);
     }
-    free(ptr);
+    free(ptr); //to avoid memory leak
 }
