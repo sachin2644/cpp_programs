@@ -1,27 +1,24 @@
 #include<stdio.h>
 #include<stdlib.h>
+#define size 5
 int main()
 {
     int *ptr;
-    int size;
-    printf("Enter size :");
-    scanf("%d",&size);
     ptr=(int *)malloc(size*sizeof(int));
     if(ptr==NULL)
     {
-        printf("Memory is unable to allocate\n");
+        printf("Memory is not allocated \n");
     }
     else
     {
-        printf("Memory successfully allocate using malloc\n");
+        printf("Memory is allocated using malloc\n");
     }
-    printf("Enter array elements \n");
     for(int i=0;i<size;i++)
     {
-        scanf("%d",&ptr[i]);
+        ptr[i]=i+1;
     }
-    printf("resverse array elements \n");
-    for(int i=size-1;i>=0;i--)
+    printf("Display the array elements \n");
+    for(int i=0;i<size;i++)
     {
         printf("%d ",ptr[i]);
     }
