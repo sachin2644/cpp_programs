@@ -1,3 +1,4 @@
+//changes made to formal parametr will affect on actual parametr
 #include<stdio.h>
 void swap(int *,int *);
 int main()
