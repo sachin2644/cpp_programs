@@ -22,6 +22,7 @@ int main()
     printf("Enter character to remove :");
     scanf("%c",&ch);
     int len=strlen(str);
+
     for(int i=0;i<len;i++)
     {
         if(str[i]==ch)
