@@ -1,3 +1,4 @@
+//changes made to actual parametr do not affect on actual paramter
 #include<stdio.h>
 void swap(int ,int );
 int main()
