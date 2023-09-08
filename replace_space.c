@@ -1,26 +1,31 @@
 #include<stdio.h>
-#include<string.h>
+void remove_space(char *str);
+typedef char X;
 #define MAX 50
-void replace_space(char str[],char ch);
 int main()
 {
-    char str[MAX],ch;
+    X str[MAX];
+    void (*f_ptr)(char *str);
+    f_ptr=&remove_space;
     printf("Enter string :");
-    fgets(str,MAX,stdin);
-    printf("Enter character to repalce space :");
-    scanf("%c",&ch);
-    replace_space(str,ch);
+    fgets(str,sizeof(str),stdin);
+    (*f_ptr)(str);
     printf("%s",str);
 }
-void replace_space(char str[],char ch)
+void remove_space(char *str)
 {
-    int len;
-    len=strlen(str);
-    for(int i=0;i<len;i++)
+    int i;
+    for(i=0;str[i]!='\0';i++)
     {
         if(str[i]==' ')
         {
-            str[i]=ch;
+            int j=i;
+            while(str[j]!='\0')
+            {
+                str[j]=str[j+1];
+                j++;
+            }
+            j--;
         }
     }
 }
